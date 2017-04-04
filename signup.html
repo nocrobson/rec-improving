@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recrutamento Front End</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/formulario.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Cadastro</h1>
+			<p>Os campos marcados com "*" são obrigatórios.</p>
+		</header>
+		<div class="alert alert-danger alert-dismissible" role="alert" style="display:none" id="erro">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<strong>Erro: </strong> <spam id="error-view">teste</spam>
+		</div>
+		<section>			
+			<form action="" method="POST">
+				<div class="form-group">
+					<label for="email">Email: <span>*</span></label>
+					<div class="input-group">
+						<span class="input-group-addon">@</span>
+						<input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
+						
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="password">Senha: <span>*</span></label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="Sua senha" required>
+				</div>
+				<div class="form-group" id="passConfirmation">
+					<label for="passwordConfirmation">Repita a senha: <span>*</span></label>
+					<input type="password" class="form-control" id="passwordConfirmation" name="passwordConfirmation" placeholder="Repita sua senha aqui" required>
+					<span id="helpBlockPass" class="help-block">As senhas digitadas não coincidem uma com a outra.</span>
+				</div>
+				<div class="form-group">
+					<label for="fullName">Nome Completo: <span>*</span></label>
+					<input type="text" class="form-control" id="fullName" name="fullName" placeholder="Seu nome completo" required>
+				</div>
+				<div class="form-group">
+					<label for="birthDate">Data de Nascimento: <span>*</span></label>
+					<input type="date" class="form-control" id="birthDate" name="birthDate" required>
+				</div>
+				<div class="form-group">
+					<label for="zipCode">CEP: <span>*</span></label>
+					<input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Digite seu CEP sem o traço" pattern="\d{8}" title="O CEP deve ser digitado no formato XXXXXXXX" required>
+				</div>
+				<div class="form-group">
+					<label for="streetName">Rua: <span>*</span></label>
+					<input type="text" class="form-control" id="streetName" name="streetName" placeholder="O nome da sua rua" required>
+				</div>
+				<div class="form-group">
+					<label for="number">Número: <span>*</span></label>
+					<input type="text" class="form-control" id="number" name="number" placeholder="Seu número" required>
+				</div>
+				<div class="form-group">
+					<label for="complement">Complemento:</label>
+					<input type="text" class="form-control" id="complement" name="complement" placeholder="Digite o complemento do seu endereço">
+				</div>
+				<div class="form-group">
+					<label for="neighbourhood">Bairro:</label>
+					<input type="text" class="form-control" id="neighbourhood" name="neighbourhood" placeholder="Seu bairro">
+				</div>
+				<div class="form-group">
+					<label for="country">País: <span>*</span></label>
+					<select class="form-control" id="country">
+						<option value="AR">Argentina</option>				 
+						<option value="BR">Brasil</option>
+						<option value="CL">Chile</option>
+						<option value="CO">Colômbia</option>
+						<option value="CR">Costa Rica</option>
+						<option value="CU">Cuba</option>
+						<option value="DO">República Dominicana</option>
+						<option value="EC">Equador</option>
+						<option value="FR">França</option>
+						<option value="GF">Guiana Francesa</option>
+						<option value="GT">Guatemala</option>
+						<option value="HN">Honduras</option>
+						<option value="HT">Haiti</option>
+						<option value="IT">Itália</option>
+						<option value="JM">Jamaica</option>
+						<option value="MX">México</option>
+						<option value="NI">Nicarágua</option>
+						<option value="PA">Panamá</option>
+						<option value="PE">Peru</option>
+						<option value="PR">Porto Rico</option>
+						<option value="PY">Paraguai</option>
+						<option value="SV">El Salvador</option>
+						<option value="US">Estados Unidos</option>
+						<option value="UY">Uruguai</option>
+						<option value="VE">Venezuela</option>
+
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="state">Estado: <span>*</span></label>
+					<input type="text" class="form-control" id="state" name="state" placeholder="Seu estado" required>
+				</div>
+				<div class="form-group">
+					<label for="city">Cidade: <span>*</span></label>
+					<input type="text" class="form-control" id="city" name="city" placeholder="Sua cidade" required>
+				</div>
+				<div>
+					<button type="submit" id="submit" class="btn btn-primary">Enviar</button>
+					<button id="teste" class="btn btn-primary">Teste</button>
+				</div>
+			</form>
+		</section>
+	</div>
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/cadastro.js"></script>
+</body>
+</html>
